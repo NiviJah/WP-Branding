@@ -9,6 +9,8 @@
  * License: GPL2
  */
 
+// Include Vafpress Framework
+require_once 'includes/bootstrap.php';
 
  // DEFINE DEFAULT PATH
 $plugin_dir_path = dirname(__FILE__);
