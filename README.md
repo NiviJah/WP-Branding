@@ -1,4 +1,4 @@
-agent_plugin
+Agent Plugin
 ============
 
 The plugin allows you to easily control some tweaks of the wordpress admin side and login screen.
