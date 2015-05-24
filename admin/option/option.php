@@ -22,7 +22,7 @@ return array(
 					'fields' => array(
 						array(
 							'type' => 'upload',
-							'name' => 'logo_upload',
+							'name' => 'logo_upload_new',
 							'label' => __('Upload', 'vp_textdomain'),
 							'description' => __('Upload a logo to use in the login screen, size should be 330px/115px', 'vp_textdomain'),
 							'default' => $plugin_url . 'img/logo.png',
@@ -43,7 +43,7 @@ return array(
 							),
 						array(
 							'type' => 'upload',
-							'name' => 'bg_login',
+							'name' => 'bg_login_new',
 							'label' => __('Upload', 'vp_textdomain'),
 							'description' => __('Upload a background to use in the login screen, best would be to use repeated one', 'vp_textdomain'),
 							'default' => $plugin_url . 'img/skulls.png',
@@ -100,6 +100,18 @@ array(
 							),
 						),
 					),
+				array(
+					'type' => 'checkbox',
+					'name' => 'add_meta_page_creation',
+					'label' => __('Add a page creation metabox', 'vp_textdomain'),
+					'description' => __('This metabox allows easy creation of new pages in all custom post types'),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
 
 
 
@@ -120,27 +132,27 @@ array(
 			'description' => __('Colors all around', 'vp_textdomain'),
 			'fields' => array(
 
-    array(
-        'type' => 'color',
-        'name' => 'menu_bg',
-        'label' => __('Menu Background', 'vp_textdomain'),
-        'description' => __('Main background color for the admin menu items', 'vp_textdomain'),
-        'default' => '#3FB14D',
-        'format' => 'hex',
-    ),
-        array(
-        'type' => 'color',
-        'name' => 'text_color',
-        'label' => __('Hover Text Color', 'vp_textdomain'),
-        'description' => __('Main color for the text in menu items', 'vp_textdomain'),
-        'default' => '#3FB14D',
-        'format' => 'hex',
-    ),
+				array(
+					'type' => 'color',
+					'name' => 'menu_bg',
+					'label' => __('Menu Background', 'vp_textdomain'),
+					'description' => __('Main background color for the admin menu items', 'vp_textdomain'),
+					'default' => '#3FB14D',
+					'format' => 'hex',
+					),
+				array(
+					'type' => 'color',
+					'name' => 'text_color',
+					'label' => __('Hover Text Color', 'vp_textdomain'),
+					'description' => __('Main color for the text in menu items', 'vp_textdomain'),
+					'default' => '#3FB14D',
+					'format' => 'hex',
+					),
 
 				),
-),
-),
-),
+			),
+		),
+	),
 
 ),
 
