@@ -48,6 +48,26 @@ return array(
 							'description' => __('Upload a background to use in the login screen, best would be to use repeated one', 'vp_textdomain'),
 							'default' => $plugin_url . 'img/skulls.png',
 							),
+						array(
+						        'type' => 'radiobutton',
+						        'name' => 'login_form_position',
+						        'label' => __('Login Form Position', 'vp_textdomain'),
+						        'items' => array(
+						            array(
+						                'value' => 'login_form_position_left',
+						                'label' => __('Align Left', 'vp_textdomain'),
+						            ),
+						            array(
+						                'value' => 'login_form_position_center',
+						                'label' => __('Align Center', 'vp_textdomain'),
+						            ),
+						            array(
+						                'value' => 'login_form_position_right',
+						                'label' => __('Align Right', 'vp_textdomain'),
+						            ),
+						        ),
+
+						    ),
 
 						),
 ),
