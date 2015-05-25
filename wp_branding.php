@@ -103,15 +103,20 @@ function agenti_my_login_logo() {
             background-size: 320px 115px;
         }
         </style>
-        <?php
-if ($form_position) {
-   echo 'test';
-}
+
+        <?php if ($form_position == 'login_form_position_left'): ?>
+         <style type="text/css">
+         #login {margin-left: 50px;} 
+         </style>
+         <?php elseif ($form_position == 'login_form_position_right'): ?>
+         <style type="text/css">
+         #login {margin-right: 50px;} 
+         </style>
+     <?php endif; ?>
 
 
+<?php }
 
-
-}
 add_action('login_enqueue_scripts', 'agenti_my_login_logo');
 
 // Background Image
