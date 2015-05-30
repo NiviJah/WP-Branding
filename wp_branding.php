@@ -85,6 +85,11 @@ function agenti_customAdmin() {
         display: block;
         width: 90%;
     }
+    <?php if (vp_option('agnet_branding.remove_wp_logo')): ?>
+    #wp-admin-bar-wp-logo {
+    display: none;
+    }
+    <?php endif; ?>
     </style>
 
     <?php

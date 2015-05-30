@@ -7,7 +7,7 @@ $plugin_path = plugin_dir_path($file);
 
 return array(
 	'title' => __('Agent Branding Option Panel', 'vp_textdomain'),
-	'logo' => $plugin_url . 'img/logo.png',
+	'logo' => $plugin_url . 'img/wp_branding.png',
 	'menus' => array(
 		array(
 			'title' => __('Login', 'vp_textdomain'),
@@ -24,8 +24,8 @@ return array(
 							'type' => 'upload',
 							'name' => 'logo_upload_new',
 							'label' => __('Login Logo', 'vp_textdomain'),
-							'description' => __('Upload a logo to use in the login screen, size should be 330px/115px', 'vp_textdomain'),
-							'default' => $plugin_url . 'img/logo.png',
+							'description' => __('Upload a logo to use in the login screen, size should be 320px/115px', 'vp_textdomain'),
+							'default' => $plugin_url . 'img/wp_branding.png',
 							),
 						array(
 							'type' => 'textbox',
@@ -127,6 +127,18 @@ array(
 					'name' => 'add_meta_page_creation',
 					'label' => __('Add a page creation metabox', 'vp_textdomain'),
 					'description' => __('This metabox allows easy creation of new pages in all custom post types'),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
+								array(
+					'type' => 'checkbox',
+					'name' => 'remove_wp_logo',
+					'label' => __('Remove WordPress logo from admin bar', 'vp_textdomain'),
+					'description' => __('This will remove the WordPress logo from the admin top bar'),
 					'items' => array(
 						array(
 							'value' => 'remove',
