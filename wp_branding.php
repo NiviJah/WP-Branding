@@ -16,7 +16,7 @@ $plugin_url = plugin_dir_url(__FILE__);
 /**
  * Include Vafpress Framework
  */
-require_once $plugin_path . 'vafpress-framework/bootstrap.php';
+require_once $plugin_path . 'framework/bootstrap.php';
 
 // options
 $tmpl_opt = $plugin_path . '/admin/option/option.php';
