@@ -170,7 +170,31 @@ array(
 							),
 						),
 					),
+					array(
+					'type' => 'checkbox',
+					'name' => 'enable_perfect_body_class',
+					'label' => __('Add the "Perfect Body Class"', 'vp_textdomain'),
+					'description' => __('This will add a body class to your website based on different browsers. supports: Opera, firefox, Gecko, Safari, Chrome, NS4, IE with versions. '),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
 
+					array(
+					'type' => 'checkbox',
+					'name' => 'remove_nagging',
+					'label' => __('Remove Update Notifications', 'vp_textdomain'),
+					'description' => __('This will remove the nagging updae notifications for everyone exept Admin '),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
 
 
 				),
