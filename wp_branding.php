@@ -291,7 +291,7 @@ if (vp_option('agnet_branding.remove_admin_bar')) {
  add_filter('show_admin_bar', '__return_false');
 }
 
-if (vp_option('agnet_branding.use_slater')) {
+if (vp_option('agnet_branding.use_slate')) {
 include_once $plugin_path . 'css/slate-admin-theme/slate-admin-theme.php';
 remove_action('admin_head', 'agenti_customAdmin'); 
 }

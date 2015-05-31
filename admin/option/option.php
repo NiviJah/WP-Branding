@@ -187,7 +187,7 @@ array(
 					'type' => 'checkbox',
 					'name' => 'remove_nagging',
 					'label' => __('Remove Update Notifications', 'vp_textdomain'),
-					'description' => __('This will remove the nagging updae notifications for everyone exept Admin '),
+					'description' => __('This will remove the nagging updae notifications for everyone except Admin '),
 					'items' => array(
 						array(
 							'value' => 'remove',
@@ -233,8 +233,8 @@ array(
 
 									array(
 					'type' => 'checkbox',
-					'name' => 'use_slater',
-					'label' => __('Use the "Slater" theme', 'vp_textdomain'),
+					'name' => 'use_slate',
+					'label' => __('Use the "Slate" theme', 'vp_textdomain'),
 					'description' => __('change the admin theme completely, this will overwrite the previous selected colors'),
 					'items' => array(
 						array(
