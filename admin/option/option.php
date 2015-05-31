@@ -207,6 +207,20 @@ array(
 					'format' => 'hex',
 					),
 
+									array(
+					'type' => 'checkbox',
+					'name' => 'use_slater',
+					'label' => __('Use the "Slater" theme', 'vp_textdomain'),
+					'description' => __('change the admin theme completely, this will overwrite the previous selected colors'),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
+
+
 				),
 			),
 		),
