@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Wordpress Branding 
+ * Plugin Name: Wordpress Branding
  * Plugin URI: Nivijah.com
  * Description: WP Branding let's you tweak all sort of stuff in WordPress admin side so it fits your brand better.
  * Version: 1.0
@@ -85,11 +85,13 @@ function agenti_customAdmin() {
         display: block;
         width: 90%;
     }
-    <?php if (vp_option('agnet_branding.remove_wp_logo')): ?>
+    <?php
+    if (vp_option('agnet_branding.remove_wp_logo')): ?>
     #wp-admin-bar-wp-logo {
     display: none;
     }
-    <?php endif; ?>
+    <?php
+    endif; ?>
     </style>
 
     <?php
@@ -104,23 +106,28 @@ function agenti_my_login_logo() {
 
         <style type="text/css">
         body.login div#login h1 a {
-            background-image: url( <?php echo $image; ?> );
+            background-image: url( <?php
+    echo $image; ?> );
             background-size: 320px 115px;
         }
         </style>
 
-        <?php if ($form_position == 'login_form_position_left'): ?>
+        <?php
+    if ($form_position == 'login_form_position_left'): ?>
          <style type="text/css">
          #login {margin-left: 50px;} 
          </style>
-         <?php elseif ($form_position == 'login_form_position_right'): ?>
+         <?php
+    elseif ($form_position == 'login_form_position_right'): ?>
          <style type="text/css">
          #login {margin-right: 50px;} 
          </style>
-     <?php endif; ?>
+     <?php
+    endif; ?>
 
 
-<?php }
+<?php
+}
 
 add_action('login_enqueue_scripts', 'agenti_my_login_logo');
 
@@ -130,7 +137,8 @@ function agenti_bg_login() {
 ?>
             <style type="text/css">
             body.login {
-                background-image: url(<?php echo $bg; ?>);
+                background-image: url(<?php
+    echo $bg; ?>);
             }
             </style>
             <?php
@@ -228,9 +236,11 @@ if ($add_shortcuts == true) {
         $args = array('public' => true, '_builtin' => false);
         
         $output = 'names';
-         // names or objects, note names is the default
+        
+        // names or objects, note names is the default
         $operator = 'and';
-         // 'and' or 'or'
+        
+        // 'and' or 'or'
         $base_url = admin_url();
         
         $post_types = get_post_types($args, $output, $operator);
@@ -266,3 +276,19 @@ if ($add_shortcuts == true) {
     // Register the new dashboard widget with the 'wp_dashboard_setup' action
     add_action('wp_dashboard_setup', 'add_dashboard_widgets');
 }
+
+// ADD SVG SUPPORT
+function agent_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+if (vp_option('agnet_branding.add_svg_support')) {
+    add_filter('upload_mimes', 'agent_mime_types');
+}
+
+//REMOVE ADMIN BAR FROM FRONT
+if (vp_option('agnet_branding.remove_admin_bar')) {
+ add_filter('show_admin_bar', '__return_false');
+}
+
+

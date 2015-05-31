@@ -134,11 +134,35 @@ array(
 							),
 						),
 					),
-								array(
+					array(
 					'type' => 'checkbox',
 					'name' => 'remove_wp_logo',
 					'label' => __('Remove WordPress logo from admin bar', 'vp_textdomain'),
 					'description' => __('This will remove the WordPress logo from the admin top bar'),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
+					array(
+					'type' => 'checkbox',
+					'name' => 'add_svg_support',
+					'label' => __('Add SVG support to media upload', 'vp_textdomain'),
+					'description' => __('This will enable you to upload and use SVG\'s using the native media uploader'),
+					'items' => array(
+						array(
+							'value' => 'remove',
+							'label' => __('Yes', 'vp_textdomain'),
+							),
+						),
+					),
+					array(
+					'type' => 'checkbox',
+					'name' => 'remove_admin_bar',
+					'label' => __('Remove Admin Bar', 'vp_textdomain'),
+					'description' => __('Removes the WordPress admin bar from front end'),
 					'items' => array(
 						array(
 							'value' => 'remove',
