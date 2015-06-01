@@ -1,4 +1,4 @@
-=== WP Branding ===
+=== Admin Branding and Tweaks  ===
 Contributors: NiviJah
 Donate link: NiviJah.com
 Tags: Admin, UI, Hacks, Branding, White Label, admin branding, admin-menu, brand dashboard, branding, custom admin, custom admin dashboard, custom branding, custom login URL, customize login screen, login screen, login url, logo in admin dashboard, own login url, nivijah, admin colors
