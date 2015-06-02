@@ -16,7 +16,7 @@ require_once 'autoload.php';
 //////////////////////////
 // Load Languages       //
 //////////////////////////
-load_theme_textdomain('vp_textdomain', VP_DIR . '/lang');
+load_theme_textdomain('wp_branding_textdomain', VP_DIR . '/lang');
 
 //////////////////////////
 // Setup FileSystem     //
@@ -85,7 +85,7 @@ if( !function_exists('vp_ajax_wrapper') )
 			try {
 				$result['data']    = call_user_func_array($function, $params);
 				$result['status']  = true;
-				$result['message'] = __("Successful", 'vp_textdomain');
+				$result['message'] = __("Successful", 'wp_branding_textdomain');
 			} catch (Exception $e) {
 				$result['data']    = '';
 				$result['status']  = false;
@@ -96,7 +96,7 @@ if( !function_exists('vp_ajax_wrapper') )
 		{
 			$result['data']    = '';
 			$result['status']  = false;
-			$result['message'] = __("Unauthorized function", 'vp_textdomain');		
+			$result['message'] = __("Unauthorized function", 'wp_branding_textdomain');		
 		}
 
 		if (ob_get_length()) ob_clean();

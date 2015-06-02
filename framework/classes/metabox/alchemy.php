@@ -490,7 +490,7 @@ class VP_MetaBox_Alchemy extends WPAlchemy_MetaBox
 			if ($g === reset($group['groups'])){ $is_first = true; $class = ' first';}
 
 			$html .= '<div id="'. $g['name'] .'" class="vp-wpa-group wpa_group wpa_group-' . $name . $class . '">';
-			$html .= '<div class="vp-wpa-group-heading"><a href="#" class="vp-wpa-group-title">' . $icon . $group['title'] . '</a><a href="#" class="dodelete vp-wpa-group-remove" title="'. __('Remove', 'vp_textdomain') .'"><i class="fa fa-times"></i> '. __('Remove', 'vp_textdomain') .'</a></div>';
+			$html .= '<div class="vp-wpa-group-heading"><a href="#" class="vp-wpa-group-title">' . $icon . $group['title'] . '</a><a href="#" class="dodelete vp-wpa-group-remove" title="'. __('Remove', 'wp_branding_textdomain') .'"><i class="fa fa-times"></i> '. __('Remove', 'wp_branding_textdomain') .'</a></div>';
 			$html .= '<div class="vp-controls' . ((!$is_first) ? ' vp-hide' : '') . '">';
 			if ($g === end($group['groups']))
 			{
@@ -512,7 +512,7 @@ class VP_MetaBox_Alchemy extends WPAlchemy_MetaBox
 		}
 
 		$html .= '<div class="vp-wpa-group-add">';
-		$html .= '<a href="#" class="button button-large docopy-' . $name . '">'. __('Add More', 'vp_textdomain') . '' . $group['title'] . '</a>';
+		$html .= '<a href="#" class="button button-large docopy-' . $name . '">'. __('Add More', 'wp_branding_textdomain') . '' . $group['title'] . '</a>';
 		$html .= '</div>';
 
 		$html .= '</div>';

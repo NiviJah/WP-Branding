@@ -44,8 +44,8 @@ class VP_Option
 			'minimum_role'          => 'edit_theme_options',
 			'menu_page'             => 'themes.php',
 			'layout'                => 'fixed',
-			'page_title'            => __( 'Vafpress Options', 'vp_textdomain' ),
-			'menu_label'            => __( 'Vafpress Options', 'vp_textdomain' ),
+			'page_title'            => __( 'Vafpress Options', 'wp_branding_textdomain' ),
+			'menu_label'            => __( 'Vafpress Options', 'wp_branding_textdomain' ),
 			'priority'              => 10,
 		), $configs);
 
@@ -58,11 +58,11 @@ class VP_Option
 
 		// check and set required configs
 		if(isset($option_key)) $this->set_option_key($option_key);
-		else throw new Exception(__( 'Option Key is required', 'vp_textdomain' ), 1);
+		else throw new Exception(__( 'Option Key is required', 'wp_branding_textdomain' ), 1);
 		if(isset($template)) $this->set_template($template);
-		else throw new Exception(__( 'Template Array/File is required', 'vp_textdomain' ), 1);
+		else throw new Exception(__( 'Template Array/File is required', 'wp_branding_textdomain' ), 1);
 		if(isset($page_slug)) $this->set_page_slug($page_slug);
-		else throw new Exception(__( 'Page Slug is required', 'vp_textdomain' ), 1);
+		else throw new Exception(__( 'Page Slug is required', 'wp_branding_textdomain' ), 1);
 
 		// swim in the pool
 		self::$pool[$this->get_option_key()] = &$this;
@@ -164,7 +164,7 @@ class VP_Option
 
 	public function dev_mode_notice()
 	{
-		VP_WP_Util::admin_notice(__("Development Mode is Active, options' values won't be saved into database.", 'vp_textdomain'), false);
+		VP_WP_Util::admin_notice(__("Development Mode is Active, options' values won't be saved into database.", 'wp_branding_textdomain'), false);
 	}
 
 	public function enqueue_scripts_and_styles()
@@ -303,7 +303,7 @@ class VP_Option
 			if(empty($option))
 			{
 				$result['status']  = false;
-				$result['message'] = __("Can not be empty", 'vp_textdomain');
+				$result['message'] = __("Can not be empty", 'wp_branding_textdomain');
 			}
 			else
 			{
@@ -328,7 +328,7 @@ class VP_Option
 				else
 				{
 					$result['status']  = false;
-					$result['message'] = __("Invalid data", 'vp_textdomain');
+					$result['message'] = __("Invalid data", 'wp_branding_textdomain');
 				}
 			}
 		}
@@ -361,7 +361,7 @@ class VP_Option
 
 			$result = array(
 				'status' => true,
-				'message'=> __("Successful", 'vp_textdomain'),
+				'message'=> __("Successful", 'wp_branding_textdomain'),
 				'option' => $sr_options,
 			);
 		}
@@ -386,12 +386,12 @@ class VP_Option
 		if($verify)
 		{
 			$result['status']  = true;
-			$result['message'] = __("Successful", 'vp_textdomain');	
+			$result['message'] = __("Successful", 'wp_branding_textdomain');	
 		}
 		else
 		{
 			$result['status']  = false;
-			$result['message'] = __("Unverified Access", 'vp_textdomain');
+			$result['message'] = __("Unverified Access", 'wp_branding_textdomain');
 		}
 		return $result;
 	}
@@ -457,7 +457,7 @@ class VP_Option
 		else if(is_array($this->get_template()))
 			$template = $this->get_template();
 		else
-			throw new Exception(__( 'Invalid template supplied', 'vp_textdomain' ), 1);
+			throw new Exception(__( 'Invalid template supplied', 'wp_branding_textdomain' ), 1);
 
 		$parser = new VP_Option_Parser();
 		$set    = $parser->parse_array_options($template, $this->use_auto_group_naming());
@@ -470,13 +470,13 @@ class VP_Option
 		{
 			// setup utility menu
 			$util_menu = new VP_Option_Control_Group_Menu();
-			$util_menu->set_title(__('Utility', 'vp_textdomain'));
+			$util_menu->set_title(__('Utility', 'wp_branding_textdomain'));
 			$util_menu->set_name('menu_util');
 			$util_menu->set_icon('font-awesome:fa-ambulance');
 
 			// setup restore default section
 			$restore_section = new VP_Option_Control_Group_Section();
-			$restore_section->set_title(__('Restore Default', 'vp_textdomain'));
+			$restore_section->set_title(__('Restore Default', 'wp_branding_textdomain'));
 			$restore_section->set_name('section_restore');
 
 			// setup restore button
@@ -485,7 +485,7 @@ class VP_Option
 
 			// setup exim section
 			$exim_section = new VP_Option_Control_Group_Section();
-			$exim_section->set_title(__('Export/Import', 'vp_textdomain'));
+			$exim_section->set_title(__('Export/Import', 'wp_branding_textdomain'));
 			$exim_section->set_name('section_exim');
 
 			// setup exim field

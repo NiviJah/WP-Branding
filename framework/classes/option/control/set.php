@@ -356,7 +356,7 @@ class VP_Option_Control_Set
 		{
 			$result['status']  = true;
 			$result['code']    = self::SAVE_SUCCESS;
-			$result['message'] = __('Saving successful', 'vp_textdomain');
+			$result['message'] = __('Saving successful', 'wp_branding_textdomain');
 			$curr_opt = get_option($option_key, array());
 		}
 		else
@@ -367,13 +367,13 @@ class VP_Option_Control_Set
 			{
 				$result['status']  = false;
 				$result['code']    = self::SAVE_FAILED;
-				$result['message'] = __('Saving failed', 'vp_textdomain');
+				$result['message'] = __('Saving failed', 'wp_branding_textdomain');
 			}
 			else
 			{
 				$result['status']  = true;
 				$result['code']    = self::SAVE_NOCHANGES;
-				$result['message'] = __('No changes made', 'vp_textdomain');
+				$result['message'] = __('No changes made', 'wp_branding_textdomain');
 			}
 		}
 

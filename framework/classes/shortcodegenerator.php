@@ -257,8 +257,8 @@ class VP_ShortcodeGenerator
 		?>
 		</div>
 		<div class="vp-sc-action">
-			<button class="vp-sc-insert button"><?php _e('Insert', 'vp_textdomain'); ?></button>
-			<button class="vp-sc-cancel button"><?php _e('Cancel', 'vp_textdomain') ?></button>
+			<button class="vp-sc-insert button"><?php _e('Insert', 'wp_branding_textdomain'); ?></button>
+			<button class="vp-sc-cancel button"><?php _e('Cancel', 'wp_branding_textdomain') ?></button>
 		</div>
 		<?php
 	}
