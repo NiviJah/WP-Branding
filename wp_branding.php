@@ -4,7 +4,7 @@
  * Plugin Name: Wordpress Branding
  * Plugin URI: Nivijah.com
  * Description: WP Branding let's you tweak all sort of stuff in WordPress admin side so it fits your brand better.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: nivijah
  * Author URI: NiviJah.com
  * License: GPL2
@@ -24,7 +24,7 @@ $tmpl_opt = $plugin_path . '/admin/option/option.php';
 /**
  * Create instance of Options
  */
-$theme_options = new VP_Option(array('is_dev_mode' => false, 'option_key' => 'agnet_branding', 'page_slug' => 'agnet_branding', 'template' => $tmpl_opt, 'menu_page' => 'options-general.php', 'use_auto_group_naming' => true, 'use_util_menu' => true, 'minimum_role' => 'edit_theme_options', 'layout' => 'fixed', 'page_title' => __('Agent Branding', 'wp_branding_textdomain'), 'menu_label' => __('Agent Branding', 'wp_branding_textdomain'),));
+$theme_options = new VP_Option(array('is_dev_mode' => false, 'option_key' => 'agnet_branding', 'page_slug' => 'agnet_branding', 'template' => $tmpl_opt, 'menu_page' => 'options-general.php', 'use_auto_group_naming' => true, 'use_util_menu' => true, 'minimum_role' => 'edit_theme_options', 'layout' => 'fixed', 'page_title' => __('WP Branding', 'wp_branding_textdomain'), 'menu_label' => __('WP Branding', 'wp_branding_textdomain'),));
 
 //-------------------------------------------------------
 

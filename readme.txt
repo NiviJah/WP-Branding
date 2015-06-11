@@ -1,10 +1,9 @@
 === Admin Branding and Tweaks  ===
 Contributors: nivijah
-Donate link: NiviJah.com
 Tags: Admin, UI, Hacks, Branding, White Label, admin branding, admin-menu, brand dashboard, branding, custom admin, custom admin dashboard, custom branding, custom login URL, customize login screen, login screen, login url, logo in admin dashboard, own login url, nivijah, admin colors
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 4.2.2
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +16,7 @@ The plugin allows you to easily control some tweaks of the WordPress admin side 
 
 After activating the plugin a new menu item called "Agent Branding" will be added under the "Settings" menu.
 
-**List of features**
+**List of Features**
 
 1. Change the login logo  
 2. Change logo URL
@@ -38,17 +37,22 @@ This will enable you to upload and use SVG's using the native media uploader
 This will add a body class to your website based on different browsers. supports: Opera, firefox, Gecko, Safari, Chrome, NS4, IE with versions.
 14. Remove Update Notifications: 
 This will remove the nagging updae notifications for everyone exept Admin
+15. Show posts / pages etc IDs.
 
-**colors and theming**
+**Colors and Theming**
 
-15. Change Menu Background: 
+16. Change Menu Background: 
 Main background color for the admin menu items
-16. Hover Text Color: 
+17. Hover Text Color: 
 Main color for the text in menu items
-17. Option to use the "Slate" theme: 
+18. Option to use the "Slate" theme: 
 change the admin theme completely, this will overwrite the previous selected colors
+19. Choose a google font for the admin interface
 
+**Coming Soon**
 
+1. Custom CSS Area
+2. Checkbox to use or not the google fonts
 
 == Installation ==
 
@@ -59,3 +63,16 @@ change the admin theme completely, this will overwrite the previous selected col
 == Screenshots ==
 
 1. Branded login screen example
+
+== Changelog ==
+
+= 1.0.1 =
+1. Show posts / pages etc IDs.
+2. Choose a google font for the admin interface
+3. Re-branding of the plugin.
+4. Changed menu label to "WP Branding"
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Added cool new features and rebranded the plugin
